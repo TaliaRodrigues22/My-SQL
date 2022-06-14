@@ -1,11 +1,11 @@
 drop table if exists libros;
 
 create table libros(
-  codigo int unsigned  auto_increment,
+  codigo int unsigned auto_increment,
   titulo varchar(40),
   autor varchar(30),
   editorial varchar(15),
-  precio decimal(5,2),
+  precio decimal(5,2) unsigned,
   primary key(codigo)
  );
 
@@ -22,30 +22,23 @@ insert into libros (titulo,autor,editorial,precio)
 insert into libros (titulo,autor,editorial,precio)
   values('Matematica estas ahi', 'Paenza', 'Paidos',19);
 
+select * from libros
+  where precio>=20 and
+  precio<=40;
 
 select * from libros
-  where autor='Borges' and
-  precio<=20;
+  where precio between 20 and 40;
 
 select * from libros
-  where autor='Paenza' or
-  editorial='Planeta';
-
-
-select * from libros
-  where (autor='Borges') xor
-  (editorial='Planeta');
+  where autor='Borges' or
+  autor='Paenza';
 
 select * from libros
-  where not (editorial='Planeta');
+  where autor in('Borges','Paenza');
 
 select * from libros
-  where (autor='Borges') or
-  (editorial='Paidos' and precio<20);
+  where autor<>'Borges' and
+  autor<>'Paenza';
 
 select * from libros
-  where (autor='Borges' or editorial='Paidos')
-  and (precio<20);
-
-
-
+  where autor not in ('Borges','Paenza');
