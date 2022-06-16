@@ -154,3 +154,7 @@ select codigo,titulo,autor,nombre from libros as l
   join editoriales as e
   on l.codigoeditorial=e.codigo;
   </h3>
+
+  <img src="../Arbi/Teoria_conjuntos.jpg">
+
+  <img src="../Arbi/teoria_conjuntos_sentencias.jpg">
