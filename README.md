@@ -1,4 +1,4 @@
-<h1> Material de SQL 
+<h1> Material de MySQL 
 <img src="./Arbi/arbi-5.png"></h1>
 <h2> Generamos consultas</h2>
 
